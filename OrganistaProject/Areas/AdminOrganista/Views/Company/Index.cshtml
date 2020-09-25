@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Company>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="background: #1979a9; padding: 15px; color: #fff;">
+    <h2 class="m-0">Company List</h2>
+</div>
+
+@if (Model.Count() < 6)
+{
+    <div class="alert alert-danger" style="padding:25px">There must be 6 componies!</div>
+}
+
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var company in Model)
+            {
+                <tr class="border-bottom:1px solid">
+                    <td>@company.Id</td>
+                    <td>
+                        <img src="~/img/@company.Image" style="border-radius:0; width:110px; height:105px" />
+                    </td>
+                    <td style="font-family: auto; font-size: 18px;">@company.Name</td>
+                    <td>
+                        <form asp-route-id="@company.Id" asp-action="Delete" method="post">
+                            <a class="btn btn-primary" asp-controller="Company" asp-action="Edit" asp-route-id="@company.Id">
+                                <i class="far fa-edit"></i>
+                            </a>
+                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger">
+        There are not any companies.
+    </div>
+}
+
+@if (Model.Count() < 6)
+{
+    <a asp-area="AdminOrganista" asp-controller="Company" asp-action="Create" class="btn btn-success" style="margin: 30px 40px;">
+        <i class="fas fa-plus" style="font-size: 15px; margin-right: 5px;"></i>
+        Create Company
+    </a>
+}
+
+
+
+

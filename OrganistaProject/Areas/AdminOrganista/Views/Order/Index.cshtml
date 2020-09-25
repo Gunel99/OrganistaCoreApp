@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="background: #1979a9; padding: 15px; color: #fff;">
+    <h2 class="m-0">Order List</h2>
+</div>
+
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Order Number</th>
+                <th>Username</th>
+                <th>Order Date</th>
+                <th>Total</th>
+                <th>Order State</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr class="border-bottom:1px solid">
+                    <td>@order.OrderNumber</td>
+                    <td style="font-family:auto;font-size: 18px;">
+                        @order.Username
+                    </td>
+                    <td>@order.OrderDate.ToString("dd MM yyyy")</td>
+                    <td>
+                        @order.Total$
+                    </td>
+                    <td>
+                        @if (order.OrderState == EnumOrderState.Waiting)
+                        {
+                            <i class="fas fa-spinner"></i>
+                        }
+                        else
+                        {
+                            <i class="far fa-check-square"></i>
+                        }
+                    </td>
+                    <td>
+                        <form asp-route-id="@order.Id" asp-action="Delete" method="post">
+                            <a class="btn btn-info" asp-controller="Order" asp-action="Info" asp-route-id="@order.Id">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                            @if (order.OrderState == EnumOrderState.Waiting)
+                            {
+                                <a class="btn btn-primary" asp-controller="Order" asp-action="Edit" asp-route-id="@order.Id">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-primary d-none" asp-controller="Order" asp-action="Edit" asp-route-id="@order.Id">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                            }
+                            
+                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger">
+        There are not any orders.
+    </div>
+}
+
+

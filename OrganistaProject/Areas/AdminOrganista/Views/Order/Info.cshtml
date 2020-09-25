@@ -1,0 +1,71 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Info";
+}
+
+<div style="background: #1979a9; padding: 15px; color: #fff;">
+    <h2 class="m-0">@Model.OrderNumber Order Info</h2>
+</div>
+
+<h6 style="padding: 10px; background: #5dbcd2; color: white;">
+    Customer's Info
+</h6>
+<form class="mt-4">
+    <div class="row ml-2">
+        <div class="form-group" style="width:49.5%">
+            <label asp-for="@Model.Username" style="font-family:auto; font-size:18px"></label>
+            <input asp-for="@Model.Username" class="form-control" disabled />
+        </div>
+        <div class="form-group" style="width:49.5%">
+            <label asp-for="@Model.PhoneNumber" style="font-family:auto; font-size:18px"></label>
+            <input asp-for="@Model.PhoneNumber" class="form-control" disabled />
+        </div>
+    </div>
+    <div class="row ml-2">
+        <div class="form-group" style="width:33%">
+            <label asp-for="@Model.Country" style="font-family: auto;  font-size:18px"></label>
+            <input asp-for="@Model.Country" class="form-control" disabled />
+        </div>
+        <div class="form-group" style="width:33%">
+            <label asp-for="@Model.City" style="font-family:auto; font-size:18px"></label>
+            <input asp-for="@Model.City" class="form-control" disabled />
+        </div>
+        <div class="form-group" style="width:33%">
+            <label asp-for="@Model.Address" style="font-family:auto; font-size:18px"></label>
+            <input asp-for="@Model.Address" class="form-control" disabled />
+        </div>
+    </div>
+</form>
+<h6 class="mt-5 mb-0" style="padding: 10px; background: #5dbcd2; color: white;">
+    Customer's Orders
+</h6>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var orderLine in Model.OrderLines)
+        {
+            <tr>
+                <td>
+                    <img src="~/img/@orderLine.Product.Image" style="width:120px; height:90px; border-radius:0" />
+                </td>
+                <td>@orderLine.Product.Name</td>
+                <td>@orderLine.Quantity</td>
+                <td>@orderLine.Price$</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary btn-icon-text">
+    <i class="mdi mdi-reload btn-icon-prepend"></i>
+    Cancel
+</a>
+
+

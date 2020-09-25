@@ -1,0 +1,222 @@
+﻿@model Cart
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    #cart_list {
+        margin: 100px 0px;
+    }
+
+    table.m th, table.m td {
+        text-align: center !important;
+    }
+
+    table.m tbody tr {
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    tbody td {
+        vertical-align: middle !important;
+    }
+
+    table.m tbody tr:hover {
+        background-color: #f0f2f3;
+    }
+
+    table.m tbody a {
+        color: #212529;
+        font-size: 20px;
+        transition: .3s;
+    }
+
+        table.m tbody a:hover {
+            color: #50BD4D;
+        }
+
+    table th {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .button a {
+        padding: 15px 20px;
+        border: 1px solid #f0f2f3;
+        border-radius: 5px;
+        background-color: #f0f2f3;
+        color: #212529;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .button i {
+        padding-right: 10px;
+    }
+
+    .button a:hover {
+        color: #50BD4D;
+    }
+    button.btn-danger{
+        transition: .3s;
+    }
+    button.btn-danger:hover {
+        color: #f0f2f3;
+    }
+</style>
+<!-- MAIN PART START -->
+
+<main>
+    <!-- ABOUT US SECTION START -->
+    <section id="about_us">
+        <div class="container">
+            <div class="row w-100 pl-3 m-0">
+                <div class="content w-100 d-flex justify-content-between">
+                    <h1>Cart</h1>
+                    <p><span>Home</span> > Cart</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT US SECTION END -->
+
+    <section id="cart_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="cart_list">
+                        @if (@Model.Products.Count() != 0)
+                        {
+                            <table class="table m">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var cart in Model.Products)
+                                    {
+                                        <tr>
+                                            <th style="width:30%;" scope="row"><img style="width:50%;" src="~/img/@cart.Product.Image" alt="@cart.Product.Name" title="@cart.Product.Name"></th>
+                                            <td>@cart.Product.Name</td>
+                                            <td>@cart.Product.Price.ToString() $</td>
+                                            <td>
+                                                <form method="post" class="form-inline">
+                                                    <div class="form-group qty">
+                                                        <div class="input-group">
+                                                            <input style="width: 80px;" type="number" size="4" name="quantity" class="form-control" value="@cart.Quantity" min="1" step="1" readonly />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                            <td>@((cart.Quantity * cart.Product.Price).ToString()) $</td>
+                                            <td>
+                                                <form asp-action="RemoveFromCart" asp-controller="Cart" method="post">
+                                                    <input type="hidden" name="ProductId" value="@cart.Product.Id" />
+                                                    <button type="submit" class="default-btn btn-danger" style="border-radius: 5px; padding: 10px;">
+                                                        Remove
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </form>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>There are 0 products in cart</p>
+                        }
+
+                        @if (@Model.Products.Count() != 0)
+                        {
+                            <div class="button d-flex justify-content-end">
+                                <a asp-action="RemoveAllFromCart" asp-controller="Cart">Remove All</a>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="button d-none">
+                                <a asp-action="RemoveAllFromCart" asp-controller="Cart">Remove All</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                @if (@Model.Products.Count() != 0)
+                {
+                    <div class="col-lg-4">
+                        <div class="cart_total">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">CART TOTALS</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Cart Subtotal</th>
+                                        <td>$ @Model.TotalPrice().ToString()</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Shipping</th>
+                                        <td>Free</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Order Total</th>
+                                        <td style="font-size: 22px;">$ @Model.TotalPrice().ToString()</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="button d-flex justify-content-end">
+                                <a asp-controller="Product" asp-action="Index" class="mr-2"><i class="fas fa-angle-double-left"></i>Go To Back</a>
+                                <a asp-controller="Cart" asp-action="Checkout">Checkout<i class="fas fa-angle-double-right ml-2"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-lg-4 d-none">
+                        <div class="cart_total">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">CART TOTALS</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Cart Subtotal</th>
+                                        <td>$ @Model.TotalPrice().ToString()</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Shipping</th>
+                                        <td>Free</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Order Total</th>
+                                        <td style="font-size: 22px;">$ @Model.TotalPrice().ToString()</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="button d-flex justify-content-end">
+                                <a href="#"><i class="fas fa-angle-double-right"></i>Proceed To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MAIN PART END -->

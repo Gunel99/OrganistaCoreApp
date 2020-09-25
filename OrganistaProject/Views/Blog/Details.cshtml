@@ -1,0 +1,173 @@
+﻿    @model BlogDetailsModel
+    @{
+        ViewData["Title"] = "Details";
+    }
+
+<style>
+    @@media only screen and (max-width: 1200px) and (min-width: 768px) {
+        .blog_detail .posted img {
+            width: 11% !important;
+        }
+    }
+
+    @@media only screen and (max-width: 992px) {
+        .aside {
+            margin-top: 50px !important;
+        }
+        .blog_name{
+            font-size:38px!important;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .blog_detail .posted img {
+            width: 15% !important;
+        }
+        .blog_name {
+            font-size: 34px !important;
+        }
+    }
+</style>
+
+    <!-- MAIN PART START -->
+
+    <main>
+        <!-- BLOG SECTION START -->
+        <section id="about_us">
+            <div class="container">
+                <div class="row w-100 pl-3 m-0">
+                    <div class="content w-100 d-flex justify-content-between">
+                        <h1>Blog Details</h1>
+                        <p><span>Home</span> > Blog > Blog Details</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT US SECTION END -->
+        <!-- BLOG DETAILS PART START -->
+        <section id="blog_details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog_detail">
+                            <div class="image">
+                                <img src="~/img/@Model.Blog.Image" alt="Blog Image">
+                            </div>
+                            <h2 class="my-4 blog_name">@Model.Blog.Name</h2>
+                            <div class="posted d-flex mb-4">
+                                <img src="~/img/@Model.Author.Image" alt="Author Image">
+                                <div class="title ml-4">
+                                    <h6>@Model.Author.Fullname</h6>
+                                    <p>Posted on <span> @Model.Author.PostedDate.ToString("dd/MM/yyyy")</span></p>
+                                </div>
+                            </div>
+                            @if (@Model.Blog.Description.Length >= 1041)
+                            {
+                                <p class="card-text pt-0" style="display:inline;">@Model.Blog.Description.Substring(0, 736).</p>
+                                <h4 class="my-3">Newly Harvested Crop</h4>
+                           
+                            
+                                <p class="card-text pt-0" style="display:inline;">@Model.Blog.Description.Substring(741, 1041).</p>
+                                <div class="image my-4">
+                                    <img src="~/img/@Model.BlogDescImage.Image" alt="Blog Description Image">
+                                </div>
+                            
+                                <p class="card-text pt-0" style="display:inline;">@Model.Blog.Description.Substring(0, 900).</p>
+                                <div class="border_content my-3">
+                                    <p>
+                                        @Model.Blog.BoldSentence
+                                    </p>
+                                </div>
+                            
+                                <p class="card-text pt-0" style="display:inline;">@Model.Blog.Description.Substring(523, 1017).</p>
+
+                                @await Component.InvokeAsync("BlogDescImageComponent")
+                            
+                                <p class="card-text pt-0" style="display:inline;">@Model.Blog.Description.Substring(840, 985)</p>
+                            }
+                            else
+                            {
+                                <p>@Model.Blog.Description</p>
+                                @await Component.InvokeAsync("BlogDescImageComponent")
+                            }
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="aside">
+                            
+                            @await Component.InvokeAsync("BlogTestimonialComponent")
+
+                            @await Component.InvokeAsync("BlogComponent")
+
+                            @await Component.InvokeAsync("CategoryComponent")
+
+                            <div class="tags mt-5">
+                                <div class="title">
+                                    <h5>Popular Tags</h5>
+                                </div>
+                                <div class="tag mt-5">
+                                    <a asp-controller="Product" asp-action="Index" asp-route-category="Fruits">Fruits</a>
+                                    <a asp-controller="Product" asp-action="Index" asp-route-category="Vegetables">Vegetables</a>
+                                </div>
+                            </div>
+                            <div class="join mt-5">
+                                <h5>Join our newsletter</h5>
+                                <p>Get exclusive weekly deals with our newsletter subscription</p>
+                                <form method="post">
+                                    <input asp-for="Newsletter.Email" placeholder="Email Address"><br>
+                                    <input class="button" type="submit" value="Join Newsletter">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+
+
+        <!-- BLOG DETAILS PART END -->
+        <!-- SOCIAL MEDIA PART START -->
+        <section id="social_media">
+            <div class="container">
+                <div class="row">
+                    <ul class="d-flex m-0 pl-3">
+                        <li class="mr-3"><a href="https://www.facebook.com/OrganicStorebygerald"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="mr-3"><a href="https://twitter.com/organicfood"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-3"><a href="https://www.linkedin.com/showcase/organicshop"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- SOCIAL MEDIA PART END -->
+        <!-- LEAVE A COMMENT PART START  -->
+        <section id="leave_comment">
+            <div class="container">
+                <div class="heading">
+                    <h4>Leave a Comment</h4>
+                </div>
+                <form method="post">
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                    <div class="form-group">
+                        <input asp-for="CommentFromPage.Fullname" class="form-control" placeholder="Fullname">
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="CommentFromPage.Email" class="form-control" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <textarea asp-for="CommentFromPage.Comment" cols="30" rows="7"
+                                  placeholder="Type your comment..."></textarea>
+                    </div>
+                    <input type="submit" class="button" value="Post Review" />
+                </form>
+            </div>
+        </section>
+        <!-- LEAVE A COMMENT PART END  -->
+        <!-- COMMENTS PART START -->
+       @await Component.InvokeAsync("CommentInBlogDetailsPageComponent")
+        <!-- COMMENTS PART END -->
+      
+
+    </main>
+
+    <!-- MAIN PART END -->

@@ -1,0 +1,10 @@
+﻿@model IEnumerable<BlogDescImage>
+
+<div class="images d-flex my-4">
+    @foreach (var blogDesc in Model)
+    {
+        <div class="image mr-4 w-100">
+            <img src="~/img/@blogDesc.Image" class="w-100" alt="Blog Description Image">
+        </div>
+    }
+</div>

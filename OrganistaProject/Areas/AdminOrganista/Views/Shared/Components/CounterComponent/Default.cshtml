@@ -1,0 +1,230 @@
+﻿@model CounterModel
+<style>
+    .board .panel {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 15px;
+        border: none;
+        background: #fff;
+    }
+
+
+    .number h3 {
+        font-size: 32px;
+        color: #676767;
+    }
+
+    .number small {
+        font-size: 14px;
+        color: #AAB5BC;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 8px 5px;
+        display: inline-block;
+    }
+
+    .board .panel .icon .fa {
+        font-size: 30px;
+        color: #FFFFFF;
+        background: #30A5FF;
+        padding: 19px;
+    }
+
+    .blue {
+        background: #30A5FF !important;
+    }
+
+    .green {
+        background: #1ABC9C !important;
+    }
+
+    .yellow {
+        background: #FABE28 !important;
+    }
+
+    .red {
+        background: #f36a5a !important;
+    }
+</style>
+
+
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Sliders.Count()</h3>
+                    <small>Sliders</small>
+                </div>
+                <a asp-action="Index" asp-controller="Slider">
+                    <div class="icon" style="margin-top:10px;">
+                        <i class="mdi mdi-presentation-play fa-5x green" style="color: white; padding: 11px 15px; font-size: 40px;"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Orders.Count()</h3>
+                    <small>Orders</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="Order">
+                    <div class="icon">
+                        <i class="fa fa-shopping-cart fa-5x blue"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Products.Count()</h3>
+                    <small>Products</small>
+                </div>
+                <a asp-action="Index" asp-controller="Product">
+                    <div class="icon">
+                        <img src="~/img/apple-2-32.ico" class="fa fa-5x red" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Categories.Count()</h3>
+                    <small>Categories</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="Category">
+                    <div class="icon">
+                        <img src="~/img/carrot-32.ico" class="fa fa-5x yellow" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board mt-3">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Blogs.Count()</h3>
+                    <small>Blogs</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="Blog">
+                    <div class="icon">
+                        <i class="fa fa-file-alt fa-5x blue"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board mt-3">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Authors.Count()</h3>
+                    <small>Authors</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="Author">
+                    <div class="icon">
+                        <i class="fa fa-user-tie fa-5x green"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board mt-3">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Users.Count()</h3>
+                    <small>Users</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="User">
+                    <div class="icon">
+                        <i class="fa fa-user fa-5x yellow"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board mt-3">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Images.Count()</h3>
+                    <small>Blog Desc Images</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="Image">
+                    <div class="icon">
+                        <i class="fa fa-images fa-5x red"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board mt-3">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.FollowImages.Count()</h3>
+                    <small>Follow Images</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="FollowImage">
+                    <div class="icon">
+                        <i class="fa fa-camera-retro fa-5x red"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="board mt-3">
+            <div class="panel panel-primary">
+                <div class="number">
+                    <h3>
+                    </h3><h3>@Model.Companies.Count()</h3>
+                    <small>Companies</small>
+
+                </div>
+                <a asp-action="Index" asp-controller="Company">
+                    <div class="icon">
+                        <i class="far fa-building fa-5x yellow" style="font-size: 30px; color: #FFFFFF; padding: 19px;"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace OrganistaProject.Entity
+{
+    public class Company
+    {
+        public int Id { get; set; }
+        [Required(ErrorMessage = "Company adini daxil edin!")]
+        public string Name { get; set; }
+        public string Image { get; set; }
+    }
+}

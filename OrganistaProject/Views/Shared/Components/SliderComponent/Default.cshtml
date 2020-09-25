@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Slider>
+
+<!-- SLIDER START -->
+<section id="main_slider">
+    <div class="sliders d-flex">
+        @foreach (Slider slider in Model)
+        {
+            <div class="slider">
+                <img src="~/img/@slider.Image" alt="Vegetables">
+                <div class="slider_content">
+                    <p>Use code <span>ORGANIC991</span> during checkout</p>
+                    @if (slider.Title.Trim() == "Organic Vegetables")
+                    {
+                        <h1 style="background: url(~/../img/vegetables.jpg) no-repeat;-webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;"> @slider.Title </h1>
+                    }
+                    else
+                    {
+                        <h1 style="background: url(~/../img/fruits.jpg) no-repeat; background-position: center; -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;"> @slider.Title </h1>
+                    }
+
+                    <p class="description">
+                        @slider.Content
+                    </p>
+                    @if (slider.Title.Trim() == "Organic Vegetables")
+                    {
+                        <a asp-controller="Product" asp-action="Index" asp-route-category="Vegetables">Shop now</a>
+                        <img src="~/img/cucumber.png" alt="Cucumber">
+                    }
+                    else
+                    {
+                        <a asp-controller="Product" asp-action="Index" asp-route-category="Fruits">Shop now</a>
+                        <img src="~/img/grapes.png" alt="Grapes">
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
+<!-- SLIDER END -->

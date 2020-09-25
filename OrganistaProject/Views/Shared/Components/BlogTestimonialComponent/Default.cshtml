@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Testimonial>
+
+<style>
+    @@media only screen and (max-width: 992px) {
+        .testimonial .image img {
+            width: 15% !important;
+        }
+    }
+</style>
+
+@foreach (Testimonial testimonial in Model)
+{
+    <div class="testimonial">
+        <div class="image">
+            <img src="~/img/@testimonial.Image" alt="">
+        </div>
+        <div class="testimonial_content">
+            <h5>@testimonial.Name</h5>
+            @if (testimonial.Description.Length >= 200)
+            {
+                <p>@testimonial.Description.Substring(0, 200).</p>
+            }
+            else
+            {
+                <p>@testimonial.Description</p>
+            }
+            <a asp-controller="About" asp-action="Index">VIEW ALL POSTS</a>
+        </div>
+    </div>
+    <div class="social mb-5">
+        <ul class="d-flex p-0 m-0 justify-content-center">
+            <li class="first"><a href="@testimonial.Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="@testimonial.Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="@testimonial.Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="last"><a href="@testimonial.Youtube"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+    </div>
+}
+

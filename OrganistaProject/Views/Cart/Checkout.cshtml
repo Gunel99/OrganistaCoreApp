@@ -1,0 +1,56 @@
+﻿@model OrderDetails
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<!-- ABOUT US SECTION START -->
+<section id="about_us">
+    <div class="container">
+        <div class="row w-100 pl-3 m-0">
+            <div class="content w-100 d-flex justify-content-between">
+                <h1>Checkout</h1>
+                <p><span>Home</span> > Checkout</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ABOUT US SECTION END -->
+
+<!-- Register start -->
+<div class="register-area pt-150 pb-150">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="login">
+                    <div class="login-form-container">
+                        <div class="login-text">
+                            <h2>checkout</h2>
+                            <span>Please checkout to get the products.</span>
+                        </div>
+                        <div class="login-form">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <form method="post">
+                                <div class="form-group">
+                                    <input asp-for="Address" class="form-control" placeholder="Address">
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Country" class="form-control" placeholder="Country">
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="City" class="form-control" placeholder="City">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" asp-for="PhoneNumber" placeholder="PhoneNumber">
+                                </div>
+                                <div class="button-box">
+                                    <input type="submit" class="default-btn text-center" value="Complete Order" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register end -->

@@ -1,0 +1,52 @@
+﻿@model BlogDescImage
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div style="background: #1979a9; padding: 15px; color: #fff;">
+    <h2 class="m-0">Create Image for Blogs</h2>
+</div>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Image" asp-action="Create" style="margin: 50px 20px">
+    <div class="form-group">
+        <input asp-for="Files" class="files" type="file" name="Files" multiple accept="image/*" style="margin: 20px 0px" />
+        <br />
+        <span asp-validation-for="Files" class="text-danger"></span>
+        <br />
+        <input asp-for="Files" type="submit" value="Upload" class="btn btn-outline-danger btn-icon-text" style="margin: 35px 0px" />
+        
+    </div>
+</form>
+
+@section Scripts{
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function (e) {
+                e.preventDefault();
+                if (document.querySelector(".files").value == "") {
+                    swal({
+                        title: "Please, select at least 1 file!",
+                        icon: "warning",
+                    });
+                } else {
+                    swal({
+                      title: "Are you sure to upload files?",
+                      icon: "warning",
+                      buttons: true,
+                      dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                      if (willDelete) {
+                        swal("Your files are uploaded", {
+                          icon: "success",
+                        });
+                          setTimeout(() => { document.querySelector("form").submit() }, 2000)
+                      }
+                    });
+                }
+            })
+        })
+    </script>
+}
+

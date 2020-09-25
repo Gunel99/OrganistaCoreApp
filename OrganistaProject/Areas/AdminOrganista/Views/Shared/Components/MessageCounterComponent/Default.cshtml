@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MessageFromPage>
+
+@{ 
+    var count = 0;
+}
+
+    <li class="nav-item dropdown mr-4">
+        <a class="nav-link count-indicator d-flex align-items-center justify-content-center" asp-area="AdminOrganista" asp-controller="Message" asp-action="Index">
+            <i class="mdi mdi-bell mx-0" style="font-size: 30px;"></i>
+            @foreach (var message in Model)
+            {
+                @if (message.IsRead == false)
+                {
+                    count = count + 1;
+                }
+            }
+            @if (count != 0)
+            {
+                <span class="count" style="color:white; margin-top:-5px; background:red; width:22px; height:22px;">
+                    @count
+                </span>
+            }
+            else
+            {
+                <span class="count d-none" style="color:white; margin-top:-5px; background:red; width:22px; height:22px;">
+                    
+                </span>
+            }
+
+        </a>
+
+    </li>

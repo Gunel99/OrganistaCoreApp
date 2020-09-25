@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MessageFromPage>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="background: #1979a9; padding: 15px; color: #fff;">
+    <h2 class="m-0">Message List</h2>
+</div>
+
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>IsResponsed</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in Model)
+            {
+                <tr class="border-bottom:1px solid">
+                    @if (message.IsRead == false)
+                    {
+                        <td style="font-weight:bold;">@message.Id</td>
+                        <td style="font-weight:bold;font-family: auto; font-size: 18px;">@message.Email</td>
+                    }
+                    else
+                    {
+                        <td>@message.Id</td>
+                        <td style="font-family: auto; font-size: 18px;">@message.Email</td>
+                    }
+                    @if (message.IsResponsed == false)
+                    {
+                        <td><i class="fas fa-comment-dots" style="color:red; font-size: 25px;"></i></td>
+                    }
+                    else
+                    {
+                        <td><i class="fas fa-clipboard-check" style="color:green; font-size: 25px;"></i></td>
+                    }
+                    <td>
+                        <form asp-route-id="@message.Id" asp-action="Delete" method="post">
+                            <a class="btn btn-info" asp-controller="Message" asp-action="Info" asp-route-id="@message.Id">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger">
+        There are not any messages.
+    </div>
+}
+

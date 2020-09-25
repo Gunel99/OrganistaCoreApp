@@ -1,0 +1,62 @@
+﻿@model IEnumerable<OrderLine>
+@{ 
+    var totalQuantity = 0;
+}
+    <div class="stars mb-4">
+        @foreach (var orderLine in Model)
+        {
+
+            @orderLine.Product.Name
+
+            @*@if ((orderLine.Product.Name.Contains("Kiwi & Strawberry")))
+            {
+                for (int i = 0; i < orderLine.Product.Name.Count(); i++)
+                {
+                    totalQuantity += orderLine.Quantity;
+                }
+                if (totalQuantity <= 2)
+                {
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                }
+                else if (totalQuantity <= 4)
+                {
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                }
+                else if (totalQuantity <= 6)
+                {
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                }
+                else if (totalQuantity <= 8)
+                {
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star"></i>
+                }
+                else if (totalQuantity <= 10)
+                {
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                    <i class="fas fa-star colory"></i>
+                }
+            }*@
+           
+        }
+
+
+    </div>

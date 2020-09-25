@@ -1,0 +1,212 @@
+﻿@model AboutModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <!-- MAIN PART START -->
+
+    <main>
+        <!-- ABOUT US SECTION START -->
+        <section id="about_us">
+            <div class="container">
+                <div class="row w-100 pl-3 m-0">
+                    <div class="content w-100 d-flex justify-content-between">
+                        <h1>About Us</h1>
+                        <p><span>Home</span> > About Us</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT US SECTION END -->
+
+        <!-- SERVING PART START -->
+        <section id="serving">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="image">
+                            <img src="~/img/@Model.AboutUsFirstDesc.Image" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="serving">
+                            <h2>@Model.AboutUsFirstDesc.Name</h2>
+                            <p>
+                                @Model.AboutUsFirstDesc.Description
+                            </p>
+                            <a asp-controller="Product" asp-action="Index">
+                                Browse Our Shop
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SERVING PART END -->
+        <!-- BUY TODAY PART START -->
+        <section id="buy_today">
+            <div class="container">
+                <div class="row">
+                    <div class="buy_today w-100 description">
+                        <h3>Buy Today and Get 20% Off</h3>
+                        <p>
+                            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed
+                            magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non
+                            nisi.
+                        </p>
+                        <a asp-controller="Product" asp-action="Index">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BUY TODAY PART END -->
+        <!-- SERVING AND PICTURE PART START -->
+        <section id="serving_and_picture">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="image">
+                            <img src="~/img/@Model.AboutUsSecondDesc.Image" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content">
+                            <h2>@Model.AboutUsSecondDesc.Name</h2>
+                            <p>
+                                @Model.AboutUsSecondDesc.Description
+                            </p>
+                            <div class="advantages">
+                                <ul class="p-0">
+                                    <li class="mb-3">
+                                        <i class="fas fa-plus-circle mr-3"></i>Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-plus-circle mr-3"></i>Lorem Ipsum has been the
+                                        industry's
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-plus-circle mr-3"></i>Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-plus-circle mr-3"></i>Lorem Ipsum has been the
+                                        industry's
+                                    </li>
+                                </ul>
+                            </div>
+                            <a asp-controller="Product" asp-action="Index">
+                                Browse Our Shop
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SERVING AND PICTURE PART END -->
+        <!-- WE ARE PEOPLE PART START -->
+        <section id="we_are_people">
+            <div class="container">
+                <div class="row">
+                    <div class="title w-100">
+                        <h4 class="mb-3">What Are People Saying</h4>
+                    </div>
+                </div>
+                <div class="testimonials">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <div class="testimonial mr-3">
+                                <div class="comment mb-4">
+                                    <h5>Perfect service</h5>
+                                    <img class="icon" src="img/quote.png" alt="">
+                                    <div class="stars mb-2">
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="m-0">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                        has been the industry
+                                    </p>
+                                </div>
+                                <div class="bio mt-5 ml-3" style="display: flex;">
+                                    <div class="image">
+                                        <img src="img/bio1.jpg" alt="">
+                                    </div>
+                                    <div class="titlee">
+                                        <h6>John Mishlen</h6>
+                                        <p>Executive CEO at company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <div class="testimonial mr-3">
+                                <div class="comment mb-4">
+                                    <h5>Competitive prices</h5>
+                                    <img class="icon" src="img/quote.png" alt="">
+                                    <div class="stars mb-2">
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="m-0">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                        has been the industry
+                                    </p>
+                                </div>
+                                <div class="bio mt-5 ml-3" style="display: flex;">
+                                    <div class="image">
+                                        <img src="img/bio2.jpg" alt="">
+                                    </div>
+                                    <div class="titlee">
+                                        <h6>Moe Sondi</h6>
+                                        <p>Executive CEO at company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                            <div class="testimonial mr-3">
+                                <div class="comment mb-4">
+                                    <h5>Great agents</h5>
+                                    <img class="icon" src="img/quote.png" alt="">
+                                    <div class="stars mb-2">
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star colory"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="m-0">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                        has been the industry
+                                    </p>
+                                </div>
+                                <div class="bio mt-5 ml-3" style="display: flex;">
+                                    <div class="image third_image">
+                                        <img src="img/bio1.jpg" alt="">
+                                    </div>
+                                    <div class="titlee">
+                                        <h6>Mandy Floss</h6>
+                                        <p>Executive CEO at company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- WE ARE PEOPLE PART END -->
+
+
+    </main>
+
+    <!-- MAIN PART END -->
+
+

@@ -1,0 +1,60 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Info";
+}
+
+<div style="background: #1979a9; padding: 15px; color: #fff;">
+    <h2 class="m-0">@Model.Id Blog Info</h2>
+</div>
+
+<h3 style="font-family:auto; font-weight:bold;" class="my-4 text-center">@Model.Name</h3>
+
+<div class="image text-center mb-4">
+    <img src="~/img/@Model.Image" alt="Blog Image" width="400" />
+</div>
+
+<h4 class="my-3">Description:</h4>
+<p>
+    @Model.Description
+</p>
+
+<h4 class="my-3">Bold Sentence:</h4>
+<p>@Model.BoldSentence</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="padding:15px 0px 5px 0px;">Is Home</th>
+            <th style="padding:15px 0px 5px 0px;">Is Approved</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @if (Model.IsHome)
+                {
+                    <span style="font-size: 20px">&#10004;</span>
+                }
+                else
+                {
+                    <span style="font-size: 20px">&#10006;</span>
+                }
+            </td>
+            <td>
+                @if (Model.IsApproved)
+                {
+                    <span style="font-size: 20px">&#10004;</span>
+                }
+                else
+                {
+                    <span style="font-size: 20px">&#10006;</span>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary btn-icon-text">
+    <i class="mdi mdi-reload btn-icon-prepend"></i>
+    Cancel
+</a>

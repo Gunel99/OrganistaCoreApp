@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FollowImage>
+
+    <!-- FOLLOW US PART START -->
+    <section id="follow_us">
+        <div class="row w-100 m-0">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 p-0">
+                <div class="follow h-100 d-flex align-items-center justify-content-center">
+                    <div class="title">
+                        <div>
+                            <h3>Follow Us On Instagram</h3>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/organic.foodstore/">FOLLOW US</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 p-0">
+                <div class="images">
+                    <div class="row w-100 m-0">
+                        @foreach(var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-4 p-0">
+                                <div class="images_part">
+                                    <div class="image">
+                                        <img src="~/img/@item.Image" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOLLOW US PART END -->

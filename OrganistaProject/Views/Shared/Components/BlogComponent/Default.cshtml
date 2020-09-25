@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Blog>
+
+    <style>
+        @@media only screen and (max-width: 992px) {
+            .blogs {
+                display:none!important;
+            }
+        }
+    </style>
+
+<div class="blogs">
+    <div class="blog mb-5">
+        <div class="title mb-5">
+            <h5>Recent Posts</h5>
+        </div>
+    </div>
+    @foreach (var blog in Model)
+    {
+        <div class="blog mb-5">
+            <div class="content">
+                <div class="image">
+                    <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">
+                        <img src="~/img/@blog.Image" alt="Blog @blog.Id">
+                    </a>
+                </div>
+                <h6 class="mt-4">@blog.Name</h6>
+                <p>Posted on <span> May 20, 2021 </span></p>
+            </div>
+        </div>
+    }
+
+</div>

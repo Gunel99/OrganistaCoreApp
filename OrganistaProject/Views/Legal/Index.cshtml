@@ -1,0 +1,53 @@
+﻿@model Newsletter
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- MAIN PART START -->
+
+    <main>
+        <!-- BLOG SECTION START -->
+        <section id="about_us">
+            <div class="container">
+                <div class="row w-100 pl-3 m-0">
+                    <div class="content w-100 d-flex justify-content-between">
+                        <h1>Legal</h1>
+                        <p><span>Home</span> > Legal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT US SECTION END -->
+        <!-- WHO ARE WE PART START -->
+        <section id="who_are_we">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        @await Component.InvokeAsync("LegalComponent")
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="aside">
+
+                            @await Component.InvokeAsync("BlogComponent")
+
+                            @await Component.InvokeAsync("CategoryComponent")
+
+                            <div class="join mt-5">
+                                <h5>Join our newsletter</h5>
+                                <p>Get exclusive weekly deals with our newsletter subscription</p>
+                                <form method="post">
+                                    <div class="text-danger" asp-validation-summary="All"></div>
+                                    <input asp-for="Email" placeholder="Email Address"><br>
+                                    <input class="button" type="submit" value="Join Newsletter">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- WHO ARE WE PART END -->
+    </main>
+
+<!-- MAIN PART END -->

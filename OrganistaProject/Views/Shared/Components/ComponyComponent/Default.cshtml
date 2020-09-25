@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Company>
+
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+    <div class="componies">
+        <div class="row w-100 m-0">
+            @foreach (Company company in Model)
+            {
+                <div class="col-lg-6 col-md-6 p-0">
+                    <div class="companies_part w-100">
+                        <div class="company">
+                            <img src="~/img/@company.Image" alt="Company @company.Id" class="image">
+                            <div class="overlay">
+                                <div class="text">@company.Name</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

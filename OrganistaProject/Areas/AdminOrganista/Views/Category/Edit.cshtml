@@ -1,0 +1,111 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div style="background: #1979a9; padding: 15px; color: #fff;">
+    <h2 class="m-0">Update Category</h2>
+</div>
+
+<form style="margin: 30px 0px;" asp-controller="Category" asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div class="form-group">
+        <label asp-for="Name">Category Name</label>
+        <input asp-for="Name" class="form-control" autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary btn-icon-text">
+        <i class="mdi mdi-file-check btn-icon-prepend"></i>
+        Submit
+    </button>
+    <button asp-action="Index" type="submit" class="btn btn-secondary btn-icon-text">
+        <i class="mdi mdi-reload btn-icon-prepend"></i>
+        Cancel
+    </button>
+</form>
+
+
+<h6 class="m-0" style="padding: 10px; background: #5dbcd2; color: white;">
+    Products
+</h6>
+
+@if (Model.Products.Count() == 0)
+{
+    <p style="text-align: center;
+    font-size: 25px;
+    font-family: auto;
+    margin: 40px 0px;">No Products</p>
+}
+else
+{
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Id</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">IsApproved</th>
+                <th scope="col">IsHome</th>
+                <th scope="col">IsFeatured</th>
+                <th style="width:180px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>
+                        <img style="width:70px; height:65px;" src="~/img/@product.Image" />
+                    </td>
+                    <td>@product.Name</td>
+                    <td>
+                        @if (product.IsApproved)
+                        {
+                            <i class="far fa-check-square"></i>
+                        }
+                        else
+                        {
+                            <img style="width:15px; height:15px; border-radius:0" src="~/img/cross-square-button.png" />
+                        }
+                    </td>
+                    <td>
+                        @if (product.IsHome)
+                        {
+                            <i class="far fa-check-square"></i>
+                        }
+                        else
+                        {
+                            <img style="width:15px; height:15px; border-radius:0" src="~/img/cross-square-button.png" />
+                        }
+                    </td>
+                    <td>
+                        @if (product.IsFeatured)
+                        {
+                            <i class="far fa-check-square"></i>
+                        }
+                        else
+                        {
+                            <img style="width:15px; height:15px; border-radius:0" src="~/img/cross-square-button.png" />
+                        }
+                    </td>
+                    <td>
+                        <form asp-controller="Category" asp-action="Remove" method="post">
+                            <input type="hidden" name="Id" value="@Model.Id" />
+                            <input type="hidden" name="Id" value="@Model.Id" />
+
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+
+
+

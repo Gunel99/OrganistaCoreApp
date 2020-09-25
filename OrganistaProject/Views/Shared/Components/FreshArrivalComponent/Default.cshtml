@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Product>
+
+    <style>
+        @@media only screen and (max-width: 992px) {
+            .cards .card .title p {
+                font-size:18px !important;
+            }
+        }
+
+            
+    </style>
+
+<section id="fresh_arrivals_carousel">
+    <div class="container p-0 d-flex justify-content-center">
+        <div class="row w-100">
+            <div class="cards w-100 d-flex multiple-items">
+                @foreach (var product in Model)
+                {
+                    <div class="card">
+                        <div class="image">
+                            <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id">
+                                <img src="~/img/@product.Image" title="Product @product.Id" alt="Product @product.Id">
+                            </a>
+                        </div>
+                        <div class="title">
+                            <p> @product.Name </p>
+                            <div class="price">
+                                <span>$@product.Price</span>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star colory"></i>
+                                <i class="fas fa-star colory"></i>
+                                <i class="fas fa-star colory"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <form asp-action="AddToCart" asp-controller="Cart" method="post" class="form-inline">
+                                <input type="hidden" name="ProductId" value="@product.Id" />
+
+                                <button class="" type="submit" style="background:#fff;border:0">
+                                    <i title="Add to cart" class="fas fa-shopping-basket"></i>
+                                </button>
+                            </form>
+                            <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id">
+                                <i title="Quick view" class="far fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

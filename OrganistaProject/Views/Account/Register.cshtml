@@ -1,0 +1,92 @@
+﻿@model RegisterVM
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<!-- ABOUT US SECTION START -->
+<section id="about_us">
+    <div class="container">
+        <div class="row w-100 pl-3 m-0">
+            <div class="content w-100 d-flex justify-content-between">
+                <h1>Sign Up</h1>
+                <p><span>Home</span> > Sign Up</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ABOUT US SECTION END -->
+
+<!-- Register start -->
+<div class="register-area pt-150 pb-150">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="login">
+                    <div class="login-form-container">
+                        <div class="login-text">
+                            <h2>sign up</h2>
+                            <span>Please login using account detail bellow.</span>
+                        </div>
+                        <div class="login-form">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <form method="post">
+                                <div class="form-group">
+                                    <input asp-for="Fullname" class="form-control" placeholder="Fullname">
+                                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Username" class="form-control" placeholder="Username">
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Email" class="form-control" placeholder="Email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control txtPassword" asp-for="Password" placeholder="Password">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control txtPassword" asp-for="ConfirmPassword" placeholder="Repeat Password">
+                                    <div class="input-group-append">
+                                        <button id="show_password" class="btn btn-primary" type="button">
+                                            <span class="fa fa-eye-slash icon"></span>
+                                        </button>
+                                    </div>
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                </div>
+                                <div class="button-box">
+
+                                    <input type="submit" class="default-btn text-center" value="Sign Up" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register end -->
+
+@section Scripts{
+    <partial name="_Validation" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                $('#show_password').hover(function show() {
+                    //Change the attribute to text
+                    $('.txtPassword').attr('type', 'text');
+                    $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+                },
+                function () {
+                    //Change the attribute back to password
+                    $('.txtPassword').attr('type', 'password');
+                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                });
+        });
+    </script>
+}

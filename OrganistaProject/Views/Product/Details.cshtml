@@ -1,0 +1,201 @@
+﻿@model ProductDetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    @@media only screen and (max-width: 992px) {
+        form.addd button {
+            margin: 20px 0px !important;
+        }
+    }
+    @@media only screen and (max-width: 768px) {
+        .tab_menu_contents {
+            margin: 0px !important;
+        }
+    }
+
+    
+</style>
+
+<!-- MAIN PART START -->
+
+    <main>
+        <!-- ABOUT US SECTION START -->
+        <section id="about_us">
+            <div class="container">
+                <div class="row w-100 pl-3 m-0">
+                    <div class="content w-100 d-flex justify-content-between">
+                        <h1>Product Details</h1>
+                        <p><span>Home</span> > Products > Priduct Details</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT US SECTION END -->
+        <!-- PRODUCT DETAILS START -->
+        <section id="product_details">
+            <div class="container">
+                <div class="product">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+                            <div class="image">
+                                <img src="~/img/@Model.Product.Image" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                            <div class="content">
+                                <div class="stars mb-4">
+                                    <i class="fas fa-star colory"></i>
+                                    <i class="fas fa-star colory"></i>
+                                    <i class="fas fa-star colory"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>@Model.Product.Name</h3>
+                                <span>$@Model.Product.Price</span>
+                                <p class="mt-4">
+                                    @Model.Product.Description
+                                </p>
+                                
+                                <form asp-action="AddToCart" asp-controller="Cart" method="post" class="form-inline addd">
+                                    <input type="hidden" name="ProductId" value="@Model.Product.Id" />
+                                    <div class="form-group qty">
+                                        <div class="input-group">
+                                            <input type="number" size="4" name="quantity" class="form-control" value="1" min="1" step="1" /> 
+                                        </div>
+                                    </div>
+                                    <button style="padding: 10px 20px; margin-left: 20px; border-radius: 5px; border: 0;" type="submit" class="default-btn btn-success"><i style="margin-right: 5px" class="fas fa-plus-circle"></i>
+                                        ADD TO CART
+                                    </button>
+                                </form>
+                                <div class="addition">
+                                    <ul class="m-0 p-0">
+                                        <li><span>Categories: </span> @Model.Category.Name </li>
+                                        <li>
+                                            <span class="tags_span">Tags: </span>
+                                            Healthy, Vegetarian, Farm
+                                        </li>
+                                        <li><span class="sku_span">SKU: </span> N/A</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRODUCT DETAILS END -->
+        <!-- TAB MENU PART START -->
+        <section id="tab_menus">
+            <div class="container">
+                <div class="tab_menu_acc">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                            <div class="tab_menu_titles">
+                                <div class="tab_menu_title selected" data-id="1">
+                                    <a href="#">
+                                        Description
+                                    </a>
+                                </div>
+                                <div class="tab_menu_title" data-id="2">
+                                    <a href="#">
+                                        Additional Information
+                                    </a>
+                                </div>
+                                <div class="tab_menu_title" data-id="3">
+                                    <a href="#">
+                                        Reviews
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                            <div class="tab_menu_contents">
+                                <div class="content" data-id="1">
+                                    <h4>Description</h4>
+                                    <p>
+                                        @Html.Raw(Model.Product.HtmlContent)
+                                    </p>
+                                </div>
+                                <div class="content d-none" data-id="2">
+                                    <h4>Additional Information</h4>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Attributes</th>
+                                                <th scope="col">Values</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var attribute in Model.ProductAttributes)
+                                            {
+                                                <tr>
+                                                    <td>@attribute.Name</td>
+                                                    <td>@attribute.Value</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="content d-none" data-id="3">
+                                    <div class="contact_us">
+                                        <div class="heading">
+                                            <h4>Leave a Comment</h4>
+                                        </div>
+                                        <form method="post">
+                                            <div class="text-danger" asp-validation-summary="All"></div>
+                                            <div class="form-group">
+                                                <input asp-for="CommentFromPage.Fullname" class="form-control" placeholder="Fullname">
+                                            </div>
+                                            <div class="form-group">
+                                                <input asp-for="CommentFromPage.Email" class="form-control" placeholder="Email Address">
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea asp-for="CommentFromPage.Comment" cols="30" rows="7"
+                                                          placeholder="Type your comment..."></textarea>
+                                            </div>
+                                            <input type="submit" class="button" value="Post Review" />
+                                        </form>
+                                    </div>
+
+                                    @await Component.InvokeAsync("CommentInBlogDetailsPageComponent")
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TAB MENU PART END -->
+        <!-- FRESH ARRIVALS START -->
+
+        <section id="fresh_arrivals">
+            <div class="container p-0">
+                <div class="row w-100 m-0 p-0">
+                    <div class="heading w-100 d-flex justify-content-between">
+                        <h4>Fresh Arrivals</h4>
+                        <div class="icons">
+                            <button class="slick-prev slick-arrow" aria-label="Previous" type="button">
+                                Previous
+                            </button>
+                            <button class="slick-next slick-arrow" aria-label="Next" type="button">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @await Component.InvokeAsync("FreshArrivalComponent")
+
+        <!-- FRESH ARRIVALS END-->
+
+
+    </main>
+
+<!-- MAIN PART END -->

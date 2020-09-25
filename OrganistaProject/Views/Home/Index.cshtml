@@ -1,0 +1,335 @@
+﻿@model EmailAndContactUsModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- MAIN PART START -->
+
+    <main>
+       
+        @await Component.InvokeAsync("SliderComponent")
+
+        <!-- CATEGORIES IN HOME START -->
+        <section id="categories_in_home">
+            <div class="container">
+                <div class="row d-flex justify-content-center p-5">
+                    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                        <a asp-controller="Product" asp-action="Index" asp-route-category="Fruits" class="first_category" style="padding: 0px 230px 140px;">
+                            <div class="card_category">
+                                <img src="~/img/fruits-icon.png" alt="Fruits Page">
+                                <h5>Fruits</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                        <a asp-controller="Product" asp-action="Index" asp-route-category="Vegetables" style="padding: 0px 230px 140px;">
+                            <div class="card_category">
+                                <img src="~/img/vegetables-icon.png" alt="Vegetables Page">
+                                <h5>Vegetables</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CATEGORIES IN HOME END -->
+        <!-- FOOD SHOW START -->
+        <section id="food_show">
+            <div class="container">
+                <div class="row d-flex justify-content-center p-0">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="card_food">
+                            <div class="overlay-effect h-100 w-100"></div>
+                            <div class="food_content">
+                                <h4><span>Freshly Picked</span> Vegetables </h4>
+                                <p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.</p>
+                                <a asp-controller="Product" asp-action="Index" asp-route-category="Vegetables">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="card_food fruit">
+                            <div class="overlay-effect h-100 w-100"></div>
+                            <div class="food_content">
+                                <h4><span>Freshly Picked</span> Fruits </h4>
+                                <p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.</p>
+                                <a asp-controller="Product" asp-action="Index" asp-route-category="Fruits">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOD SHOW END -->
+        <!-- FOOD CARDS START -->
+        <section id="food_cards">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="food_card">
+                            <img src="~/img/vegetables-icon.png" alt="">
+                            <h5>Guaranteed Organic</h5>
+                            <p>
+                                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="food_card">
+                            <img src="~/img/carrot.png" alt="">
+                            <h5>Daily Harvesting</h5>
+                            <p>
+                                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="food_card">
+                            <img src="~/img/groceries.png" alt="">
+                            <h5>Cheap & Healthy</h5>
+                            <p>
+                                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOD CARDS END -->
+        <!-- FRESH ARRIVALS START -->
+        <section id="fresh_arrivals">
+            <div class="container p-0">
+                <div class="row w-100 m-0 p-0">
+                    <div class="heading w-100 d-flex justify-content-between">
+                        <h4>Fresh Arrivals</h4>
+                        <div class="icons">
+                            <button class="slick-prev slick-arrow" aria-label="Previous" type="button">
+                                Previous
+                            </button>
+                            <button class="slick-next slick-arrow" aria-label="Next" type="button">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @await Component.InvokeAsync("FreshArrivalComponent")
+
+        <!-- FRESH ARRIVALS END-->
+        <!-- BUY TODAY PART START -->
+        <section id="buy_today">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+                        <div class="buy_today">
+                            <h3>Buy Today and Get 20% Off</h3>
+                            <p>
+                                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed
+                                magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non
+                                nisi.
+                            </p>
+                            <a asp-controller="Product" asp-action="Index">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="join">
+                            <h5>Join our newsletter</h5>
+                            <p>Get exclusive weekly deals with our newsletter subscription</p>
+                            <form method="post">
+                                <input asp-for="Newsletter.Email" placeholder="Email Address"><br>
+                                <input class="button" type="submit" value="Join Newsletter">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BUY TODAY PART END -->
+        <!-- GET FOOD PART START -->
+        <section id="get_food">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="get_lemon get">
+                            <div class="overlay-effect h-100 w-100"></div>
+                            <div class="title">
+                                <h4><span>Get Your</span> Lemons</h4>
+                                <p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.</p>
+                                <a asp-controller="Product" asp-action="Details" asp-route-id="4002">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="get_vegetables get gets">
+                            <div class="overlay-effect h-100 w-100"></div>
+                            <div class="title">
+                                <h4><span>Freshly Picked </span> Vegetables</h4>
+                                <a asp-controller="Product" asp-action="Index" asp-route-category="Vegetables">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="get_fruits get gets">
+                            <div class="overlay-effect h-100 w-100"></div>
+                            <div class="title">
+                                <h4><span>Freshly Picked </span> Fruits</h4>
+                                <a asp-controller="Product" asp-action="Index" asp-route-category="Fruits">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- GET FOOD PART END -->
+
+        @await Component.InvokeAsync("BlogListForHomePageComponent")
+
+        <!-- TESTIMONIAL PART START -->
+        <section id="testimonial_componies">
+            <div class="container">
+                <div class="row">
+
+                    @await Component.InvokeAsync("TestimonialComponent")
+
+                    @await Component.InvokeAsync("ComponyComponent")
+                           
+                </div>
+            </div>
+        </section>
+        <!-- TESTIMONIAL PART END -->
+        <!-- FAQ PART START -->
+        <section id="faq_contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                        <div class="faq">
+                            <div class="faq_title">
+                                <h4 class="pb-3">FAQ</h4>
+                            </div>
+                            <div class="accardions">
+                                <div class="accardion">
+                                    <div class="title d-flex justify-content-around mt-3">
+                                        <div class="heading w-100">
+                                            <h6 class="m-0">What is Organista?</h6>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="display: none;">
+                                        <p class="m-0">
+                                            Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget
+                                            tincidunt nibh pulvinar a. Proin eget tortor risus. Vivamus magna justo,
+                                            lacinia eget consectetur sed, convallis at tellus.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accardion">
+                                    <div class="title d-flex justify-content-around mt-3">
+                                        <div class="heading w-100">
+                                            <h6 class="m-0">Getting Started with Organista</h6>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="display: none;">
+                                        <p class="m-0">
+                                            Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget
+                                            tincidunt nibh pulvinar a. Proin eget tortor risus. Vivamus magna justo,
+                                            lacinia eget consectetur sed, convallis at tellus.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accardion">
+                                    <div class="title d-flex justify-content-around mt-3">
+                                        <div class="heading w-100">
+                                            <h6 class="m-0">Do i have the latest version?</h6>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="display: none;">
+                                        <p class="m-0">
+                                            Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget
+                                            tincidunt nibh pulvinar a. Proin eget tortor risus. Vivamus magna justo,
+                                            lacinia eget consectetur sed, convallis at tellus.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accardion">
+                                    <div class="title d-flex justify-content-around mt-3">
+                                        <div class="heading w-100">
+                                            <h6 class="m-0">How many times can I use Organista?</h6>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="display: none;">
+                                        <p class="m-0">
+                                            Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget
+                                            tincidunt nibh pulvinar a. Proin eget tortor risus. Vivamus magna justo,
+                                            lacinia eget consectetur sed, convallis at tellus.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accardion">
+                                    <div class="title d-flex justify-content-around mt-3">
+                                        <div class="heading w-100">
+                                            <h6 class="m-0">How to migrate my website?</h6>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="display: none;">
+                                        <p class="m-0">
+                                            Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget
+                                            tincidunt nibh pulvinar a. Proin eget tortor risus. Vivamus magna justo,
+                                            lacinia eget consectetur sed, convallis at tellus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 pl-5">
+                        <div class="contact_us mt-3">
+                            <div class="heading">
+                                <h4 class="pb-3">Contact Us</h4>
+                            </div>
+                            <form method="post">
+                                <div class="text-danger" asp-validation-summary="All"></div>
+                                <div class="form-group">
+                                    <input asp-for="MessageFromPage.Fullname" class="form-control" placeholder="Fullname">
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="MessageFromPage.Email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="MessageFromPage.Subject" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="form-group">
+                                    <textarea asp-for="MessageFromPage.Message" cols="30" rows="7"
+                                              placeholder="Type your message"></textarea>
+                                </div>
+                                <input type="submit" class="button" value="Send Message" />
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- FAQ PART END -->
+        
+
+    </main>
+
+<!-- MAIN PART END -->

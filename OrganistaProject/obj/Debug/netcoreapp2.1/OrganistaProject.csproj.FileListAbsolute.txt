@@ -1,0 +1,169 @@
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.deps.json
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.runtimeconfig.json
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.runtimeconfig.dev.json
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.dll
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.csprojAssemblyReference.cache
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.AssemblyInfo.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorTargetAssemblyInfo.cache
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.pdb
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.dll
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.pdb
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.Views.dll
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.Views.pdb
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.TagHelpers.input.cache
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.TagHelpers.output.cache
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorCoreGenerate.cache
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorTargetAssemblyInfo.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.Views.pdb
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.csproj.CopyComplete
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CategoryComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FeaturedComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Product\Details.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FreshArrivalComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\User\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\User\Create.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Validation.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\User\Update.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Role\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Role\Create.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Role\Update.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Checkout.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Completed.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Product\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Category\Index.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Product\Create.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Category\Create.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Product\Update.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Category\Update.cshtml.g.cs
+C:\Users\User\Desktop\code\Kamran m\BackEnd\ASP.net\Tasks\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.deps.json
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.runtimeconfig.json
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.runtimeconfig.dev.json
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.dll
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.pdb
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.Views.dll
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\bin\Debug\netcoreapp2.1\OrganistaProject.Views.pdb
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.csprojAssemblyReference.cache
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.AssemblyInfo.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.TagHelpers.input.cache
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.TagHelpers.output.cache
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorCoreGenerate.cache
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Category\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Category\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Product\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Product\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Role\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Role\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Role\Update.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\User\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\User\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\User\Update.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Details.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Checkout.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Completed.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Product\Details.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CategoryComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FeaturedComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FreshArrivalComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Validation.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorTargetAssemblyInfo.cache
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.RazorTargetAssemblyInfo.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.Views.pdb
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.dll
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.pdb
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\OrganistaProject.csproj.CopyComplete
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\BlogDescImageComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\BlogComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Blog\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Blog\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Image\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Image\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Author\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Author\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Blog\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\BlogListForHomePageComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Author\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Blog\Info.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Category\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Product\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Order\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Order\Info.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Order\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FooterComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\HeaderComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\ContactComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Legal\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\LegalComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FollowImageComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\FollowImage\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\FollowImage\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Shared\Components\SosialMediaComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Shared\Components\CounterComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Message\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Message\Info.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Message\SendEmail.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Shared\Components\MessageCounterComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Shared\Components\CommentCounterComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Comment\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Comment\Info.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Comment\SendEmail.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CommentInBlogDetailsPageComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\About\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\SliderComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Slider\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Slider\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Slider\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\TestimonialComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Testimonial\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Testimonial\Info.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Testimonial\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Testimonial\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\BlogTestimonialComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FeaturedBlogComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\ComponyComponent\Default.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Company\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Company\Create.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Company\Edit.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Emails\Index.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Areas\AdminOrganista\Views\Emails\SendEmail.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SearchProductPartial.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SearchBlogPartial.cshtml.g.cs
+C:\Users\User\Desktop\OrganistaProject\OrganistaProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\RatingComponent\Default.cshtml.g.cs

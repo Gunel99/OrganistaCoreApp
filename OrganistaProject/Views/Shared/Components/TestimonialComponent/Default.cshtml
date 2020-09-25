@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Testimonial>
+
+<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+    <div class="testimonials d-flex">
+        @foreach (Testimonial testimonial in Model)
+        {
+            <div class="testimonial">
+                <div class="border_div">
+                    <div class="image d-flex justify-content-center">
+                        <img class="person" src="~/img/@testimonial.Image" alt="">
+                        <img class="icon" src="~/img/quote.png" alt="">
+                    </div>
+                    <div class="testimonial_content">
+                        <h5>@testimonial.Name</h5>
+                        <span>@testimonial.Profession</span>
+                        <p>
+                            @testimonial.Description
+                        </p>
+                    </div>
+                </div>
+                <div class="social">
+                    <ul class="d-flex p-0 m-0 justify-content-center">
+                        <li class="first"><a href="@testimonial.Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="@testimonial.Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="@testimonial.Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="last"><a href="@testimonial.Youtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Blog>
+
+<!-- FROM BLOG PART START -->
+<section id="from_blog">
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h4 class="mb-4">From Our Blog</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="blogs">
+                @foreach (Blog blog in Model)
+                {
+                    <div class="blog d-flex">
+                        <div class="image">
+                            <img src="~/img/@blog.Image" alt="Blog @blog.Id">
+                        </div>
+                        <div class="content">
+                            <h5>@blog.Name</h5>
+                            <p class="posted">Posted On @blog.Author.PostedDate.ToString("dd/MM/yyyy")</p>
+                            @if (blog.Description.Length >= 108)
+                            {
+                                <p>@blog.Description.Substring(0, 108)</p>
+                            }
+                            else
+                            {
+                                <p>@blog.Description</p>
+                            }
+                            <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id"> Read More </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FROM BLOG PART END -->

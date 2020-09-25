@@ -1,0 +1,418 @@
+﻿@model Bio
+
+<style>
+    .categories_header .search {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+    }
+
+    .categories_header .search {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+        .categories_header .search form {
+            position: relative;
+        }
+
+        .categories_header .search input {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: 2px solid #f0f2f3;
+            color: #252525;
+            height: 61px;
+            padding: 0 60px 0px 10px;
+            width: 100%;
+        }
+
+        .categories_header .search ul {
+            list-style: outside none none;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            z-index: 9999999999;
+            width: 100%;
+        }
+
+            .categories_header .search ul li {
+                padding: 15px 20px 0px 20px;
+                font-size: 16px;
+            }
+
+                .categories_header .search ul li:last-child {
+                    padding: 15px 20px 15px 20px;
+                }
+
+                .categories_header .search ul li a {
+                    color: gray;
+                }
+
+                    .categories_header .search ul li a:hover {
+                        color: #50BD4D;
+                    }
+
+        .categories_header .search button {
+            background: #fff none repeat scroll 0 0;
+            border: 2px solid #f0f2f3;
+            color: gray;
+            font-size: 18px;
+            height: 100%;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60px;
+        }
+
+            .categories_header .search button:hover {
+                background: #f0f2f3 none repeat scroll 0 0;
+                cursor: pointer;
+            }
+
+            .categories_header .search button i {
+                display: inline-block;
+            }
+</style>
+
+<!-- HEADER START -->
+<header class="main">
+    <div class="contant_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <ul class="contact_icons d-flex p-0">
+                        <li><a href="@Model.Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="@Model.Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="@Model.Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="@Model.Youtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <ul class="register_login d-flex justify-content-end p-0">
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li><a asp-area="AdminOrganista" asp-controller="Dashboard" asp-action="Index">Admin Page</a></li>
+                                <li><a href="#">@User.Identity.Name</a></li>
+                                <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="#">@User.Identity.Name</a></li>
+                                <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+                            }
+                        }
+                        else
+                        {
+                            <li><a asp-controller="Account" asp-action="Register">Sign Up</a></li>
+                            <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar p-0">
+        <div class="container">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="logo">
+                    <div class="img">
+                        <a href="#">
+                            <img src="~/img/@Model.Logo" alt="Organista">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <nav>
+                    <ul class="d-flex p-0 m-0 justify-content-center">
+                        <li class="home">
+                            <a asp-controller="Home" asp-action="Index" class="selected">Home</a>
+                        </li>
+                        <li class="about">
+                            <a asp-controller="About" asp-action="Index">About</a>
+                        </li>
+                        <li class="shop">
+                            <a asp-controller="Product" asp-action="Index">Shop</a>
+                        </li>
+                        <li class="blog">
+                            <a asp-controller="Blog" asp-action="Index">Blog</a>
+                        </li>
+                        <li class="contact">
+                            <a href="#">Contact</a>
+                            <div class="sub_contact">
+                                <ul>
+                                    <li class="legal">
+                                        <a asp-controller="Legal" asp-action="Index">Legal</a>
+                                    </li>
+                                    <li class="contact_us">
+                                        <a asp-controller="Contact" asp-action="Index">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12">
+                <div class="row justify-content-end basket_resp">
+                    <div class="basket">
+                        <a asp-action="Index" asp-controller="Cart" target="_blank">
+                            <i class="fas fa-shopping-basket"></i><sup style="margin-left: 10px;" id="productCount">@await Component.InvokeAsync("BasketProductNumberComponent")</sup><sup> items</sup>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="categories_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pr-0">
+                    <div class="all_categories">
+                        <ul class="m-0 p-0">
+                            <li>
+                                <a href="#">All Categories</a>
+                                <div class="sub_all_categories">
+                                    <ul>
+                                        <li class="fruits">
+                                            <a asp-controller="Product" asp-action="Index" asp-route-category="Fruits">Fruits</a>
+                                        </li>
+                                        <li class="vegetables">
+                                            <a asp-controller="Product" asp-action="Index" asp-route-category="Vegetables">Vegetables</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                @*<div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+            <div class="header_search">
+                <form action="#" class="d-flex">
+                    <input type="text" placeholder="Look for Fruits, Vegetables" autocomplete="off"
+                           name="header_search_panel">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>*@
+                <!--Search Form Start-->
+                @if (@ViewContext.RouteData.Values["controller"].ToString() == "Home")
+                {
+                    <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+                        <div class="search" style="display:none">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input type="search" id="search_product_input" autocomplete="off" placeholder="Look for Fruits, Vegetables" name="search">
+                                    <ul style="background-color:white;" id="searchUl"></ul>
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (@ViewContext.RouteData.Values["controller"].ToString() == "About")
+                {
+                    <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+                        <div class="search" style="display:none">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input type="search" id="search_product_input" autocomplete="off" placeholder="Look for Fruits, Vegetables" name="search">
+                                    <ul style="background-color:white;" id="searchUl"></ul>
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (@ViewContext.RouteData.Values["controller"].ToString() == "Account")
+                {
+                    <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+                        <div class="search" style="display:none">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input type="search" id="search_product_input" autocomplete="off" placeholder="Look for Fruits, Vegetables" name="search">
+                                    <ul style="background-color:white;" id="searchUl"></ul>
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                else if (@ViewContext.RouteData.Values["controller"].ToString() == "Contact")
+                {
+                    <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+                        <div class="search" style="display:none">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input type="search" id="search_product_input" autocomplete="off" placeholder="Look for Fruits, Vegetables" name="search">
+                                    <ul style="background-color:white;" id="searchUl"></ul>
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (@ViewContext.RouteData.Values["controller"].ToString() == "Legal")
+                {
+                    <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+                        <div class="search" style="display:none">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input type="search" id="search_product_input" autocomplete="off" placeholder="Look for Fruits, Vegetables" name="search">
+                                    <ul style="background-color:white;" id="searchUl"></ul>
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (@ViewContext.RouteData.Values["controller"].ToString() == "Blog")
+                {
+                    <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+                        <div class="search">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input type="search" id="search_blog_input" autocomplete="off" placeholder="Look for Fruits, Vegetables" name="search">
+                                    <ul style="background-color:white;" id="searchUl"></ul>
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (@ViewContext.RouteData.Values["controller"].ToString() == "Product")
+                {
+                    <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12 p-0">
+                        <div class="search">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input type="search" id="search_product_input" autocomplete="off" placeholder="Look for Fruits, Vegetables" name="search">
+                                    <ul style="background-color:white;" id="searchUl"></ul>
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+                <!--End of Search Form-->
+
+                <div class="col-lg-1 col-md-1 col-sm-1 sidebarr">
+                    <div class="sidebar_icon d-flex justify-content-end">
+                        <div class="icon">
+                            <i class="fas fa-bars openSidebar"></i>
+                        </div>
+                    </div>
+                    <div class="sidebar" style="overflow-y: scroll;
+                box-shadow: -10px -10px 8px #eee;
+                transform: translate(340px);
+                position: fixed;
+                width: 330px;
+                height: 100%;
+                right: 0;
+                top: 0;
+                background: #fff;
+                z-index: 99999999;
+                transition: all 0.4s;
+                transition-timing-function: linear;">
+                        <div class="close" style="position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    color: white;
+                    cursor: pointer;">
+                            <i class="fas fa-times" style="color: grey;
+                        font-size: 25px;"></i>
+                        </div>
+                        <div class="sidebar_list">
+                            <ul style="padding: 100px 40px;
+                        list-style: none;">
+                                <li class="home" style="padding: 8px;">
+                                    <a asp-controller="Home" asp-action="Index" style="font-weight: 500;
+                                text-transform: uppercase;
+                                letter-spacing: .1em;
+                                color: #18181d;
+                                text-decoration: none;">Home</a>
+                                </li>
+                                <li class="pages" style="padding: 8px;">
+                                    <a asp-controller="About" asp-action="Index" style="font-weight: 500;
+                                text-transform: uppercase;
+                                letter-spacing: .1em;
+                                color: #18181d;
+                                text-decoration: none;">About</a>
+                                </li>
+                                <li class="shop" style="padding: 8px;">
+                                    <a asp-controller="Product" asp-action="Index" style="font-weight: 500;
+                                text-transform: uppercase;
+                                letter-spacing: .1em;
+                                color: #18181d;
+                                text-decoration: none;">Shop</a>
+                                </li>
+                                <li class="blog" style="padding: 8px;">
+                                    <a asp-controller="Blog" asp-action="Index" style="font-weight: 500;
+                                text-transform: uppercase;
+                                letter-spacing: .1em;
+                                color: #18181d;
+                                text-decoration: none;">Blog</a>
+                                </li>
+                                <li class="contact" style="padding: 8px;">
+                                    <a style="font-weight: 500;
+                                text-transform: uppercase;
+                                letter-spacing: .1em;
+                                color: #18181d;
+                                text-decoration: none;padding-right: 10px;">Contact</a><i class="fas fa-caret-right"></i>
+                                    <div class="sub_contact" style="display:none;">
+                                        <ul style="list-style-type: none;">
+                                            <li style="padding: 10px 0px 5px 0px;">
+                                                <a asp-controller="Contact" asp-action="Index" style="
+                                letter-spacing: .1em;
+                                color: gray;
+                                text-decoration: none;">Contact Us</a>
+                                            </li>
+                                            <li style="padding: 5px 0px 10px 0px;">
+                                                <a asp-controller="Legal" asp-action="Index" style="
+                                letter-spacing: .1em;
+                                color: gray;
+                                text-decoration: none;">Legal</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<!-- HEADER END -->
+
+

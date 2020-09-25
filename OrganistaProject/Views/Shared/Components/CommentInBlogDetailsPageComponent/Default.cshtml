@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CommentFromPage>
+
+<style>
+    @@media only screen and (max-width: 1200px){
+        .comment .image{
+            display:none!important;
+        }
+    }
+</style>
+
+<section id="comments" style="margin:55px 0px;">
+    <div class="container">
+        <div class="row">
+            @foreach (var commentt in Model)
+            {
+                @if (commentt.IsRead == true)
+                {
+                    <div class="comment d-flex py-5 w-100">
+                        <div class="image" style="text-align: center; padding: 20px 0px; border: 1px solid #f0f2f3; border-radius: 50%;
+                                height: 90px; width: 100px; background: #f0f2f3; margin-right: 25px;">
+                            <i class="far fa-user" style="font-size:40px;"></i>
+                        </div>
+                        <div class="content w-100 d-block" style="margin-top: 10px;">
+                            <div class="title d-flex justify-content-between">
+                                <h5>@commentt.Fullname</h5>
+
+                                <p>Posted on: <span>@DateTime.Now.ToString("dd MMM yyyy")</span></p>
+                            </div>
+                            <p>@commentt.Comment</p>
+                        </div>
+                    </div>
+                    @if (commentt.IsResponsed == true)
+                    {
+                        <div class="comment d-flex w-100" style="margin-left: 80px;">
+                            <div class="image" style="text-align: center; border: 1px solid #f0f2f3; border-radius: 50%;
+                                height: 90px; width: 100px; background: #f0f2f3; margin-right: 25px; overflow:hidden;">
+                                <img src="~/img/organic-food-distributors-3864x1932.jpg" style="width: 230%; border-radius:0;" alt="Organista">
+                            </div>
+                            <div class="content w-100 d-block" style="margin-top: 10px;">
+                                <div class="title">
+                                    <h5>Organista</h5>
+                                    <p><span style="font-weight:bold;">@commentt.Fullname </span>email gonderildi...</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</section>
